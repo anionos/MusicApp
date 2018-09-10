@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RhythmIt</string>
+
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="rhythm">Rhythm</string>
+    <string name="it">it</string>
+    <string name="artists">Artists</string>
+    <string name="home">Home</string>
+    <string name="textview">10 songs</string>
+    <string name="artist">Artist</string>
+    <string name="albums">Albums</string>
+    <string name="all_songs">All songs</string>
+    <string name="popular_album">Popular Album</string>
+
+</resources>

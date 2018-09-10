@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#aa96fd</color>
+    <color name="colorPrimaryTransparent">#d808b1b7</color>
+    <color name="colorPrimaryDark">#6639f7</color>
+    <color name="colorAccent">#fffdfe</color>
+
+
+    <color name="black_overlay">#97292929</color>
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="black">#000</color>
+    <color name="light">#589b87ef</color>
+
+    <color name="white">#FFFF</color>
+
+</resources>
