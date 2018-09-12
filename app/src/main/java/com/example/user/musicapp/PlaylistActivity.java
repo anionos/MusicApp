@@ -21,7 +21,7 @@ public class PlaylistActivity extends AppCompatActivity {
     private MediaPlayer mMediaPlayer;
 
     SeekBar simpleSeekBar;
-
+    Song songs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,15 +33,14 @@ public class PlaylistActivity extends AppCompatActivity {
         setTitle("");
 
         Intent intent = getIntent();
-        Song songs = Parcels.unwrap(intent.getParcelableExtra("song"));
-        int image = intent.getIntExtra("image", 0);
+        songs = Parcels.unwrap(intent.getParcelableExtra("song"));
 
         TextView songNameTv = findViewById(R.id.textView9);
         songNameTv.setText(songs.getSongName());
         TextView artistNameTv = findViewById(R.id.textView10);
         artistNameTv.setText(songs.getArtistName());
         ImageView imageView = findViewById(R.id.banky_card2);
-        imageView.setImageResource(image);
+        imageView.setImageResource(songs.getmImageResourceId());
 
     }
     @Override
@@ -51,20 +50,24 @@ public class PlaylistActivity extends AppCompatActivity {
 
         return true;
     }
+
     int playOrPause =0; //we use 0 for play and 1 for pause
     public void startPlaying(View view) {
-        mMediaPlayer = MediaPlayer.create(PlaylistActivity.this, R.raw.davido_assurance);
-        mMediaPlayer.start();
+
         ImageButton buttonPlay = findViewById(R.id.play);
         if(playOrPause == 0 ){
             //pause
             playOrPause = 1;
             buttonPlay.setImageResource(R.drawable.ic_pause_black_24dp);
-
+            mMediaPlayer = MediaPlayer.create(PlaylistActivity.this, songs.getmAudioResourceId());
+            mMediaPlayer.start();
         } else {
             //play
             playOrPause = 0;
             buttonPlay.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+            mMediaPlayer.stop();
+            mMediaPlayer.release();
+            mMediaPlayer=null;
         }
     }
 
@@ -78,5 +81,15 @@ public class PlaylistActivity extends AppCompatActivity {
     }
 
     public void add_song(View view) {
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(mMediaPlayer != null){
+            mMediaPlayer.stop();
+            mMediaPlayer.release();
+            mMediaPlayer=null;
+        }
+        super.onBackPressed();
     }
 }

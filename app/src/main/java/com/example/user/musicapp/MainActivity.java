@@ -15,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.support.v4.view.GravityCompat;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Find the view that shows the cardview category
-        ImageView banky = findViewById(R.id.banky_imageView);
+        ImageButton banky = findViewById(R.id.image_button1);
 
         banky.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Find the view that shows the cardview category
-        ImageView wizzy = findViewById(R.id.wizzy);
+        ImageButton wizzy = findViewById(R.id.image_button2);
 
         wizzy.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Find the view that shows the cardview category
-        ImageView tiwa = findViewById(R.id.tiwa);
+        ImageButton tiwa = findViewById(R.id.image_button3);
 
         tiwa.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Find the view that shows the cardview category
-        ImageView omaumi = findViewById(R.id.oma);
+        ImageButton omaumi = findViewById(R.id.image_button4);
 
         omaumi.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Find the view that shows the cardview category
-        ImageView falz = findViewById(R.id.falz);
+        ImageButton falz = findViewById(R.id.image_button5);
 
         falz.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Find the view that shows the cardview category
-        ImageView emma = findViewById(R.id.emma);
+        ImageButton emma = findViewById(R.id.image_button6);
 
         emma.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Find the view that shows the cardview category
-        ImageView dija = findViewById(R.id.dija);
+        ImageButton dija = findViewById(R.id.image_button7);
 
         dija.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -184,16 +185,16 @@ public class MainActivity extends AppCompatActivity {
     private List<Song> generateAllSongsList(){
         ArrayList<Song> songs = new ArrayList<Song>();
 
-        songs.add(new Song("BankyW", "Heaven"));
-        songs.add(new Song("Tuface", "amaka disappoint"));
-        songs.add(new Song("Mr Real", "Legbegpe"));
-        songs.add(new Song("Flavour", "African Queen"));
-        songs.add(new Song("DannyP", "This is Akwa Ibom"));
-        songs.add(new Song("Tiwa", "lova lova"));
-        songs.add(new Song("Simi", "Joromi"));
-        songs.add(new Song("Davido", "Gaga shuffle"));
-        songs.add(new Song("Dija", "woe"));
-        songs.add(new Song("Tecno", "Pana"));
+        songs.add(new Song("BankyW", "Heaven", R.drawable.bankyw, R.raw.banky_heaven));
+        songs.add(new Song("Tuface", "Amaka disappoint", R.drawable.twobaba,R.raw.davido_assurance));
+        songs.add(new Song("Mr Real", "Legbegpe", R.drawable.mr_real,R.raw.mr_real));
+        songs.add(new Song("Flavour", "Unchangeable", R.drawable.flavour,R.raw.davido_assurance));
+        songs.add(new Song("DannyP", "This is Akwa Ibom", R.drawable.dannyp,R.raw.davido_assurance));
+        songs.add(new Song("Tiwa", "lova lova",R.drawable.tiwa,R.raw.davido_assurance));
+        songs.add(new Song("Simi", "Joromi", R.drawable.simi,R.raw.simi_joromi));
+        songs.add(new Song("Davido", "Assurance",R.drawable.davido,R.raw.davido_assurance));
+        songs.add(new Song("Dija", "woe",R.drawable.dija,R.raw.davido_assurance));
+        songs.add(new Song("Tecno", "Pana",R.drawable.tecno,R.raw.davido_assurance));
 
         return songs;
     }
@@ -201,16 +202,16 @@ public class MainActivity extends AppCompatActivity {
     private List<Song> generateArtistList(){
         ArrayList<Song> songs = new ArrayList<Song>();
 
-        songs.add(new Song("BankyW", "Heaven"));
-        songs.add(new Song("Tuface", "amaka disappoint"));
-        songs.add(new Song("Mr Real", "Legbegpe"));
-        songs.add(new Song("Flavour", "heaven"));
-        songs.add(new Song("DannyP", "This is Akwa Ibom"));
-        songs.add(new Song("Tiwa", "heaven"));
-        songs.add(new Song("Simi", "Joromi"));
-        songs.add(new Song("Davido", "Gaga shuffle"));
-        songs.add(new Song("Dija", "woe"));
-        songs.add(new Song("Tecno", "Pana"));
+        songs.add(new Song("BankyW", "Heaven",R.drawable.bankyw,0));
+        songs.add(new Song("Tuface", "amaka disappoint",R.drawable.twobaba,0));
+        songs.add(new Song("Mr Real", "Legbegpe",R.drawable.bankyw,0));
+        songs.add(new Song("Flavour", "Unchangeable",R.drawable.twobaba,0));
+        songs.add(new Song("DannyP", "This is Akwa Ibom",R.drawable.dija,0));
+        songs.add(new Song("Tiwa", "Heaven",R.drawable.tiwa,0));
+        songs.add(new Song("Simi", "Joromi",R.drawable.dija,0));
+        songs.add(new Song("Davido", "Assurance",R.drawable.emma,R.raw.davido_assurance));
+        songs.add(new Song("Dija", "woe",R.drawable.dija,0));
+        songs.add(new Song("Tecno", "Pana",R.drawable.dija,0));
 
         return songs;
     }

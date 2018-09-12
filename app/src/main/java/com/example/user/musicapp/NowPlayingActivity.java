@@ -77,7 +77,7 @@ public class NowPlayingActivity extends AppCompatActivity implements SongAdapter
         Intent intent = new Intent(this, PlaylistActivity.class);
         Song song = songs.get(position);
         intent.putExtra("song", Parcels.wrap(song));
-        intent.putExtra("image", image);
+//        intent.putExtra("image", image);
         startActivity(intent);
     }
 

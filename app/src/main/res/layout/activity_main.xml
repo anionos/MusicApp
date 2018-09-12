@@ -41,8 +41,6 @@
                         android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
                         android:layout_marginTop="15dp"/>
 
-
-
                 </LinearLayout>
 
             </android.support.v7.widget.Toolbar>
@@ -52,15 +50,15 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/banky"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
                         android:clipChildren="false"
                         android:clipToPadding="true"
                         android:layout_marginTop="10dp"
@@ -73,10 +71,9 @@
                         tools:cardElevation="10dp"
                         tools:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:layout_height="match_parent">
 
                             <ImageView
                                 android:id="@+id/banky_imageView"
@@ -85,15 +82,26 @@
                                 android:src="@drawable/bankyw"
                                 android:scaleType="centerCrop" />
 
+                            <ImageButton
+                                android:id="@+id/image_button1"
+                                android:padding="5dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/round_button"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_play_arrow_black_24dp"
+                                android:backgroundTint="@color/light"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp" />
 
-                        </LinearLayout>
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
                         android:clipChildren="false"
                         android:clipToPadding="true"
                         android:layout_marginTop="10dp"
@@ -106,7 +114,7 @@
                         tools:cardElevation="10dp"
                         tools:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
@@ -118,7 +126,19 @@
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/wizkid" />
 
-                        </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/image_button2"
+                                android:padding="5dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/round_button"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_play_arrow_black_24dp"
+                                android:backgroundTint="@color/light"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp" />
+
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
@@ -151,7 +171,7 @@
                         tools:cardElevation="10dp"
                         tools:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
@@ -163,7 +183,19 @@
                                 android:src="@drawable/tiwa"
                                 android:scaleType="centerCrop" />
 
-                        </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/image_button3"
+                                android:padding="5dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/round_button"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_play_arrow_black_24dp"
+                                android:backgroundTint="@color/light"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp" />
+
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
@@ -183,20 +215,31 @@
                         tools:cardElevation="10dp"
                         tools:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:onClick="tiwa"
                                 android:id="@+id/oma"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/omawunmi"
                                 android:scaleType="centerCrop" />
 
-                        </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/image_button4"
+                                android:padding="5dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/round_button"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_play_arrow_black_24dp"
+                                android:backgroundTint="@color/light"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp" />
+
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
@@ -247,7 +290,7 @@
                         tools:cardElevation="10dp"
                         tools:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
@@ -259,7 +302,18 @@
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/falzz" />
 
-                        </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/image_button5"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/round_button"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_play_arrow_black_24dp"
+                                android:backgroundTint="@color/light"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp" />
+
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
@@ -279,7 +333,7 @@
                         tools:cardElevation="10dp"
                         tools:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
@@ -291,7 +345,19 @@
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/emma" />
 
-                        </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/image_button6"
+                                android:padding="5dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/round_button"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_play_arrow_black_24dp"
+                                android:backgroundTint="@color/light"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp" />
+
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
@@ -311,7 +377,7 @@
                         tools:cardElevation="10dp"
                         tools:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
@@ -321,10 +387,21 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/dija"
-                                android:scaleType="centerCrop"
-                                />
+                                android:scaleType="centerCrop" />
 
-                        </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/image_button7"
+                                android:padding="5dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/round_button"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_play_arrow_black_24dp"
+                                android:backgroundTint="@color/light"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp" />
+
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
