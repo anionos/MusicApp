@@ -31,6 +31,8 @@ public class PlaylistActivity extends AppCompatActivity {
         Toolbar toolbar =  findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
         setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         Intent intent = getIntent();
         songs = Parcels.unwrap(intent.getParcelableExtra("song"));
@@ -43,6 +45,13 @@ public class PlaylistActivity extends AppCompatActivity {
         imageView.setImageResource(songs.getmImageResourceId());
 
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return super.onSupportNavigateUp();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -92,4 +101,5 @@ public class PlaylistActivity extends AppCompatActivity {
         }
         super.onBackPressed();
     }
+
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -70,6 +71,7 @@ public class NowPlayingActivity extends AppCompatActivity implements SongAdapter
 
         listView.setAdapter(adapter);
 
+
     }
 
     @Override
@@ -103,5 +105,9 @@ public class NowPlayingActivity extends AppCompatActivity implements SongAdapter
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         listView.setLayoutParams(params);
+    }
+
+    public void previousActivity(View view) {
+        finish();
     }
 }
